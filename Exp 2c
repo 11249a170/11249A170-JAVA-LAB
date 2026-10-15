@@ -1,0 +1,44 @@
+Exp 2c:Largest of the three numbers
+
+Aim:
+To write a Java program to find the largest among three numbers.
+
+Algorithm:
+1. Start the program.
+2. Import the Scanner package.
+3. Read three numbers from the user.
+4. Compare the three numbers using if-else statements.
+5. Find and display the largest number.
+6. Stop the program.
+
+Program:
+import java.util.Scanner;
+public class LargestOfThree {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a, b, c;
+
+        System.out.print("Enter three numbers: ");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        c = sc.nextInt();
+
+        if (a >= b && a >= c) {
+            System.out.println("Largest number = " + a);
+        } else if (b >= a && b >= c) {
+            System.out.println("Largest number = " + b);
+        } else {
+            System.out.println("Largest number = " + c);
+        }
+
+        sc.close();
+    }
+}
+
+Output:
+Enter three numbers: 25 60 40
+Largest number = 60
+
+Result:
+Thus, the Java program to find the largest of three numbers was executed successfully.
