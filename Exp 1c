@@ -1,0 +1,64 @@
+Exp 1c:Largest and smallest Number
+
+Aim:
+To write a Java program to find the largest and smallest numbers in an array.
+
+Algorithm:
+1. Start the program.
+2. Import the Scanner package.
+3. Read the number of array elements and their values.
+4. Assume the first element is both the largest and smallest.
+5. Compare each element with the largest and smallest values.
+6. Display the largest and smallest numbers.
+7. Stop the program.
+
+Program:
+import java.util.Scanner;
+public class LargestSmallest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n, i;
+        System.out.print("Enter number of elements: ");
+        n = sc.nextInt();
+
+        int a[] = new int[n];
+
+        System.out.println("Enter array elements:");
+        for (i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        int largest = a[0];
+        int smallest = a[0];
+
+        for (i = 1; i < n; i++) {
+            if (a[i] > largest) {
+                largest = a[i];
+            }
+
+            if (a[i] < smallest) {
+                smallest = a[i];
+            }
+        }
+
+        System.out.println("Largest number = " + largest);
+        System.out.println("Smallest number = " + smallest);
+
+        sc.close();
+    }
+}
+
+Output:
+Enter number of elements: 5
+Enter array elements:
+25
+10
+50
+5
+30
+Largest number = 50
+Smallest number = 5
+
+Result:
+Thus, the Java program to find the largest and smallest numbers in an array was executed successfully.
