@@ -1,0 +1,79 @@
+Exp 1c:Arithmetic using switch case
+
+Aim:
+To write a Java program to perform arithmetic operations using a switch case statement.
+
+Algorithm:
+1. Start the program.
+2. Import the Scanner package.
+3. Read two numbers from the user.
+4. Display the arithmetic operations menu.
+5. Read the user's choice.
+6. Use the switch case to perform addition, subtraction, multiplication, or division.
+7. Display the result.
+8. Stop the program.
+
+Program:
+import java.util.Scanner;
+public class ArithmeticSwitch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a, b, choice;
+
+        System.out.print("Enter first number: ");
+        a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        b = sc.nextInt();
+
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
+
+        System.out.print("Enter your choice: ");
+        choice = sc.nextInt();
+
+        switch (choice) {
+            case 1:
+                System.out.println("Result = " + (a + b));
+                break;
+
+            case 2:
+                System.out.println("Result = " + (a - b));
+                break;
+
+            case 3:
+                System.out.println("Result = " + (a * b));
+                break;
+
+            case 4:
+                if (b != 0) {
+                    System.out.println("Result = " + ((double) a / b));
+                } else {
+                    System.out.println("Division by zero is not possible");
+                }
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+        }
+
+        sc.close();
+    }
+}
+
+Output:
+Enter first number: 20
+Enter second number: 10
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+Enter your choice: 1
+Result = 30
+
+
+ Result:
+Thus, the Java program to perform arithmetic operations using a switch case statement was executed successfully.
