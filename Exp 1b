@@ -1,0 +1,56 @@
+Exp 1b:Binary Search
+
+Aim:
+To write a Java program to search for an element in an array using the binary search method.
+
+Algorithm:
+1. Start the program.
+2. Read the array elements and the key to be searched.
+3. Initialize low = 0 and high = n - 1.
+4. Find the middle element using mid = (low + high) / 2.
+5. If the middle element equals the key, display the position.
+6. If the key is smaller, search the left half; otherwise, search the right half.
+7. Repeat until the element is found or the search range becomes empty.
+8. Stop the program.
+
+Program:
+import java.util.Scanner;
+public class BinarySearch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a[] = {10, 20, 30, 40, 50};
+        int low = 0, high = a.length - 1;
+        int mid, key, found = 0;
+
+        System.out.print("Enter element to search: ");
+        key = sc.nextInt();
+
+        while (low <= high) {
+            mid = (low + high) / 2;
+
+            if (a[mid] == key) {
+                System.out.println("Element found at position " + (mid + 1));
+                found = 1;
+                break;
+            } else if (key < a[mid]) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+
+        if (found == 0) {
+            System.out.println("Element not found");
+        }
+
+        sc.close();
+    }
+}
+
+Output:
+Enter element to search: 30
+Element found at position 3
+
+Result:
+Thus, the Java program to search for an element using the binary search method was executed successfully.
