@@ -1,0 +1,47 @@
+Exp :Reverse Number
+
+Aim:
+To write a Java program to reverse a given number.
+
+Algorithm:
+1. Start the program.
+2. Import the Scanner package.
+3. Read a number from the user.
+4. Initialize reverse = 0.
+5. Extract the last digit using n % 10.
+6. Add the digit to the reverse number using reverse = reverse * 10 + digit.
+7. Remove the last digit using n = n / 10.
+8. Repeat until the number becomes zero.
+9. Display the reversed number.
+10. Stop the program.
+
+Program:
+
+import java.util.Scanner;
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n, digit, reverse = 0;
+
+        System.out.print("Enter a number: ");
+        n = sc.nextInt();
+
+        while (n != 0) {
+            digit = n % 10;
+            reverse = reverse * 10 + digit;
+            n = n / 10;
+        }
+
+        System.out.println("Reverse number = " + reverse);
+
+        sc.close();
+    }
+}
+
+Output:
+Enter a number: 1234
+Reverse number = 4321
+
+Result:
+Thus, the Java program to reverse a given number was executed successfully.
