@@ -1,0 +1,56 @@
+Exp :Armstrong number
+
+Aim:
+To write a Java program to check whether a given number is an Armstrong number or not.
+
+Algorithm:
+1. Start the program.
+2. Import the Scanner package.
+3. Read a number from the user.
+4. Store the original number in a variable.
+5. Extract each digit and calculate the sum of its cubes.
+6. Compare the sum with the original number.
+7. If both are equal, print Armstrong Number; otherwise, print Not an Armstrong Number.
+8. Stop the program.
+
+Program:
+
+import java.util.Scanner;
+public class ArmstrongNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n, original, digit, sum = 0;
+
+        System.out.print("Enter a number: ");
+        n = sc.nextInt();
+
+        original = n;
+
+        while (n > 0) {
+            digit = n % 10;
+            sum = sum + digit * digit * digit;
+            n = n / 10;
+        }
+
+        if (sum == original) {
+            System.out.println("Armstrong Number");
+        } else {
+            System.out.println("Not an Armstrong Number");
+        }
+
+        sc.close();
+    }
+}
+
+Output:
+Enter a number: 153
+Armstrong Number
+
+Another example:
+Enter a number: 123
+Not an Armstrong Number
+
+
+Result:
+Thus, the Java program to check whether a given number is an Armstrong number or not was executed successfully.
