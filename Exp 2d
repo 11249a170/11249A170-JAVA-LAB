@@ -1,0 +1,50 @@
+Exp 2d:Leap Year
+
+Aim:
+To write a Java program to check whether a given year is a leap year or not.
+
+Algorithm:
+1. Start the program.
+2. Import the Scanner package.
+3. Read a year from the user.
+4. Check whether the year is divisible by 400, or divisible by 4 but not by 100.
+5. If the condition is true, print Leap Year; otherwise, print Not a Leap Year.
+6. Stop the program.
+
+Program:
+
+import java.util.Scanner;
+
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int year;
+
+        System.out.print("Enter a year: ");
+        year = sc.nextInt();
+
+        if (year % 400 == 0 ||
+            (year % 4 == 0 && year % 100 != 0)) {
+            System.out.println("Leap Year");
+        } else {
+            System.out.println("Not a Leap Year");
+        }
+
+        sc.close();
+    }
+}
+
+
+
+Output:
+Enter a year: 2024
+Leap Year
+
+Another example:
+Enter a year: 2023
+Not a Leap Year
+
+
+Result:
+Thus, the Java program to check whether a given year is a leap year or not was executed successfully.
