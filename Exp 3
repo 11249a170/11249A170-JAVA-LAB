@@ -1,0 +1,51 @@
+Exp:String Operations
+
+Aim:
+To write a Java program to perform string operations such as finding the length, converting to uppercase and lowercase, and concatenating two strings.
+
+Algorithm:
+1. Start the program.
+2. Import the Scanner package.
+3. Read two strings from the user.
+4. Find the length of the first string.
+5. Convert the first string to uppercase and lowercase.
+6. Join the two strings using concatenation.
+7. Display the results.
+8. Stop the program.
+
+Program:
+
+import java.util.Scanner;
+
+public class StringOperation {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String s1, s2;
+
+        System.out.print("Enter first string: ");
+        s1 = sc.nextLine();
+
+        System.out.print("Enter second string: ");
+        s2 = sc.nextLine();
+
+        System.out.println("Length = " + s1.length());
+        System.out.println("Uppercase = " + s1.toUpperCase());
+        System.out.println("Lowercase = " + s1.toLowerCase());
+        System.out.println("Concatenation = " + s1.concat(s2));
+
+        sc.close();
+    }
+}
+
+Output:
+Enter first string: Hello
+Enter second string: Java
+Length = 5
+Uppercase = HELLO
+Lowercase = hello
+Concatenation = HelloJava
+
+
+Result:
+Thus, the Java program to perform string operations was executed successfully.
