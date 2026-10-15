@@ -1,0 +1,48 @@
+Exp :Replacing of string
+
+Aim:
+To write a Java program to replace a word or character in a given string using the replace() method.
+
+Algorithm:
+1. Start the program.
+2. Import the Scanner package.
+3. Read a string from the user.
+4. Read the old word and the new word.
+5. Use the replace() method to replace the old word with the new word.
+6. Display the replaced string.
+7. Stop the program.
+
+Program:
+
+import java.util.Scanner;
+public class ReplaceString {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str, oldWord, newWord;
+
+        System.out.print("Enter a string: ");
+        str = sc.nextLine();
+
+        System.out.print("Enter the word to replace: ");
+        oldWord = sc.nextLine();
+
+        System.out.print("Enter the new word: ");
+        newWord = sc.nextLine();
+
+        String result = str.replace(oldWord, newWord);
+
+        System.out.println("Replaced string = " + result);
+
+        sc.close();
+    }
+}
+
+Output:
+Enter a string: I like Java
+Enter the word to replace: Java
+Enter the new word: Python
+Replaced string = I like Python
+
+Result:
+Thus, the Java program to replace a word in a given string using the replace() method was executed successfully.
