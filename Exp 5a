@@ -1,0 +1,53 @@
+Exp :Substring of a string
+
+Aim:
+To write a Java program to find a substring from a given string using the substring() method.
+
+Algorithm:
+1. Start the program.
+2. Import the Scanner package.
+3. Read a string from the user.
+4. Read the starting and ending indexes.
+5. Use the substring() method to extract the substring.
+6. Display the substring.
+7. Stop the program.
+
+Program:
+
+import java.util.Scanner;
+public class SubstringExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str;
+        int start, end;
+
+        System.out.print("Enter a string: ");
+        str = sc.nextLine();
+
+        System.out.print("Enter starting index: ");
+        start = sc.nextInt();
+
+        System.out.print("Enter ending index: ");
+        end = sc.nextInt();
+
+        if (start >= 0 && start < end && end <= str.length()) {
+            System.out.println("Substring = " +
+                               str.substring(start, end));
+        } else {
+            System.out.println("Invalid indexes");
+        }
+
+        sc.close();
+    }
+}
+
+
+Output:
+Enter a string: HelloJava
+Enter starting index: 0
+Enter ending index: 5
+Substring = Hello
+
+Result:
+Thus, the Java program to extract a substring from a given string was executed successfully.
