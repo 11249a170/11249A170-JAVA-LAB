@@ -1,0 +1,76 @@
+Exp :Packages using the Arithmetic operations
+
+Aim:
+To write a Java program to create and use a user-defined package for performing arithmetic operations.
+
+Algorithm:
+1. Start the program.
+2. Create a package named mypack.
+3. Create a class inside the package to perform arithmetic operations.
+4. Import the package into another Java program.
+5. Create an object of the arithmetic class.
+6. Perform addition, subtraction, multiplication and division.
+7. Display the results.
+8. Stop the program.
+
+Program:
+File 1: Arithmetic.java
+package mypack;
+
+public class Arithmetic {
+    public void add(int a, int b) {
+        System.out.println("Addition = " + (a + b));
+    }
+
+    public void subtract(int a, int b) {
+        System.out.println("Subtraction = " + (a - b));
+    }
+
+    public void multiply(int a, int b) {
+        System.out.println("Multiplication = " + (a * b));
+    }
+
+    public void divide(int a, int b) {
+        if (b != 0) {
+            System.out.println("Division = " + ((double) a / b));
+        } else {
+            System.out.println("Division by zero is not possible");
+        }
+    }
+}
+
+
+File 2: ArithmeticDemo.java
+import java.util.Scanner;
+import mypack.Arithmetic;
+
+public class ArithmeticDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter two numbers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        Arithmetic obj = new Arithmetic();
+
+        obj.add(a, b);
+        obj.subtract(a, b);
+        obj.multiply(a, b);
+        obj.divide(a, b);
+
+        sc.close();
+    }
+}
+
+
+Output:
+Enter two numbers: 20 10
+Addition = 30
+Subtraction = 10
+Multiplication = 200
+Division = 2.0
+
+
+Result:
+Thus, the Java program to create and use a user-defined package for arithmetic operations was executed successfully.
