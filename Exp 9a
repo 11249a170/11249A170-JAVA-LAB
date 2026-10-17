@@ -1,0 +1,42 @@
+Aim:
+To write a Java program to demonstrate single inheritance.
+
+Algorithm:
+1. Create a parent class Animal.
+2. Define the eat() method in the parent class.
+3. Create a child class Dog using extends.
+4. Define the bark() method in the child class.
+5. Create an object of Dog.
+6. Call both methods and display the output.
+
+
+Program:
+import java.util.Scanner;
+
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+public class SingleInheritance {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+}
+
+Output:
+Animal is eating
+Dog is barking
+
+
+Result:
+Thus, single inheritance was demonstrated successfully.
