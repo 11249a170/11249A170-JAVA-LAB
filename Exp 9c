@@ -1,0 +1,57 @@
+Hierarchical Inheritance
+Aim:
+To write a Java program to demonstrate hierarchical inheritance.
+
+Algorithm:
+1. Create a parent class Animal.
+2. Create two child classes, Dog and Cat.
+3. Both child classes extend Animal.
+4. Create objects of both child classes.
+5. Call the inherited and individual methods.
+
+Program:
+import java.util.Scanner;
+
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+class Cat extends Animal {
+    void meow() {
+        System.out.println("Cat is meowing");
+    }
+}
+
+public class HierarchicalInheritance {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        Cat c = new Cat();
+
+        d.eat();
+        d.bark();
+
+        c.eat();
+        c.meow();
+    }
+}
+
+
+
+Output:
+Animal is eating
+Dog is barking
+Animal is eating
+Cat is meowing
+
+
+Result:
+Thus, hierarchical inheritance was demonstrated successfully.
+
