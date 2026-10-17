@@ -1,0 +1,35 @@
+Aim:
+To write and execute a Java Applet program to draw a line and a rectangle using the Graphics class.
+
+Algorithm:
+1. Start the program.
+2. Import the Applet and Graphics classes.
+3. Create a class extending Applet.
+4. Override the paint() method.
+5. Use drawLine() to draw a line.
+6. Use drawRect() to draw a rectangle.
+7. Compile and run the program.
+
+Program:
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class DrawShapes extends Applet {
+    public void paint(Graphics g) {
+        // Draw a line
+        g.drawLine(50, 50, 200, 50);
+
+        // Draw a rectangle
+        g.drawRect(50, 100, 150, 80);
+    }
+}
+
+
+
+Output
+Expected output: one horizontal line and one rectangle.
+
+
+
+Result:
+Thus, the Java Applet program to draw a line and a rectangle using drawLine() and drawRect() was written successfully.
