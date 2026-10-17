@@ -1,0 +1,50 @@
+Aim:
+To write a Java program to demonstrate multilevel inheritance.
+
+Algorithm:
+1. Create a class Animal.
+2. Create a class Dog that extends Animal.
+3. Create a class Puppy that extends Dog.
+4. Create an object of Puppy.
+5. Call the methods of all three classes.
+
+Program:
+import java.util.Scanner;
+
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+class Puppy extends Dog {
+    void weep() {
+        System.out.println("Puppy is weeping");
+    }
+}
+
+public class MultilevelInheritance {
+    public static void main(String[] args) {
+        Puppy p = new Puppy();
+        p.eat();
+        p.bark();
+        p.weep();
+    }
+}
+
+
+
+Output:
+Animal is eating
+Dog is barking
+Puppy is weeping
+
+
+Result:
+Thus, multilevel inheritance was demonstrated successfully.
