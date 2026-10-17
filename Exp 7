@@ -1,0 +1,47 @@
+Aim: To write a Java program to demonstrate multithreading by creating two threads and executing them concurrently.
+
+Algorithm:
+1. Start the program.
+2. Create a class extending the Thread class.
+3. Override the run() method to print a message.
+4. Create two thread objects.
+5. Call the start() method on both threads.
+6. Stop the program.
+
+Program:
+class MyThread extends Thread {
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(
+                Thread.currentThread().getName() + ": " + i
+            );
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        MyThread t2 = new MyThread();
+
+        t1.setName("Thread 1");
+        t2.setName("Thread 2");
+
+        t1.start();
+        t2.start();
+    }
+}
+
+Output (one possible output):
+Thread 1: 1
+Thread 1: 2
+Thread 2: 1
+Thread 2: 2
+Thread 1: 3
+Thread 2: 3
+Thread 1: 4
+Thread 2: 4
+Thread 1: 5
+Thread 2: 5
+
+Result: Thus, multithreading was implemented successfully in Java by creating and executing two threads using the Thread class.
