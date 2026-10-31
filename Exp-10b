@@ -1,0 +1,39 @@
+Exp-10b :Functional interface
+
+Aim: To write a Java program to demonstrate a functional interface.
+
+Algorithm:
+1. Start the program.
+2. Create a functional interface named Message.
+3. Declare one abstract method called display().
+4. Create a class that implements the interface.
+5. Define the display method.
+6. Create an object of the class.
+7. Call the display method.
+8. Stop the program.
+
+Program:
+@FunctionalInterface
+interface Message {
+    void display();
+}
+
+class Greeting implements Message {
+    public void display() {
+        System.out.println("Welcome to Java");
+    }
+}
+
+public class FunctionalInterfaceExample {
+    public static void main(String[] args) {
+        Greeting g = new Greeting();
+        g.display();
+    }
+}
+
+
+Output:
+Welcome to Java
+
+
+Result: Thus, the Java program to demonstrate a functional interface was executed successfully.
