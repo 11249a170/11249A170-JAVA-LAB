@@ -1,0 +1,43 @@
+Exp-10a :Normal interfce
+Aim:To write a Java program to demonstrate a normal interface.
+
+Algorithm:
+1. Start the program.
+2. Create an interface named Vehicle.
+3. Declare two methods: start() and stop().
+4. Create a class named Car that implements the interface.
+5. Define both methods inside the Car class.
+6. Create an object of the Car class.
+7. Call both methods.
+8. Stop the program.
+Program:
+interface Vehicle {
+    void start();
+    void stop();
+}
+
+class Car implements Vehicle {
+    public void start() {
+        System.out.println("Car is starting");
+    }
+
+    public void stop() {
+        System.out.println("Car is stopping");
+    }
+}
+
+public class NormalInterface {
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.start();
+        c.stop();
+    }
+}
+
+
+Output:
+Car is starting
+Car is stopping
+
+
+Result: Thus, the Java program to demonstrate a normal interface was executed successfully.
