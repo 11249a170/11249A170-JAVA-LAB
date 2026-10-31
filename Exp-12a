@@ -1,0 +1,49 @@
+Exp-12a:FileReader
+Aim: To write a Java program to read data from a file using FileReader.
+
+Algorithm:
+1. Start the program.
+2. Import the java.io package.
+3. Create a FileReader object.
+4. Open the file using FileReader.
+5. Read the characters from the file.
+6. Display the file contents.
+7. Close the file.
+8. Stop the program.
+
+Program:
+File name: FileReaderExample.java
+import java.io.*;
+
+public class FileReaderExample {
+    public static void main(String[] args) {
+        try {
+            FileReader fr = new FileReader("sample.txt");
+
+            int i;
+
+            while ((i = fr.read()) != -1) {
+                System.out.print((char)i);
+            }
+
+            fr.close();
+        }
+        catch (IOException e) {
+            System.out.println(e);
+        }
+    }
+}
+
+
+Input file: sample.txt
+Welcome to Java Programming.
+FileReader is used to read a file.
+
+
+Output:
+Welcome to Java Programming.
+FileReader is used to read a file.
+
+
+Result: Thus, the Java program to read data from a file using FileReader was executed successfully.
+
