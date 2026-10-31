@@ -1,0 +1,47 @@
+Exp-12b:FileWriter
+
+Aim: To write a Java program to write data into a file using FileWriter.
+
+Algorithm:
+1. Start the program.
+2. Import the java.io package.
+3. Create a FileWriter object.
+4. Open or create a file.
+5. Write the data into the file.
+6. Close the file.
+7. Display a success message.
+8. Stop the program.
+
+Program:
+File name: FileWriterExample.java
+import java.io.*;
+
+public class FileWriterExample {
+    public static void main(String[] args) {
+        try {
+            FileWriter fw = new FileWriter("sample.txt");
+
+            fw.write("Welcome to Java Programming.");
+            fw.write("\nFileWriter is used to write data.");
+
+            fw.close();
+
+            System.out.println("Data written successfully.");
+        }
+        catch (IOException e) {
+            System.out.println(e);
+        }
+    }
+}
+
+
+Output:
+Data written successfully.
+
+
+Content stored in sample.txt:
+Welcome to Java Programming.
+FileWriter is used to write data.
+
+
+Result: Thus, the Java program to write data into a file using FileWriter was executed successfully.
