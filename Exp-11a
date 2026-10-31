@@ -1,0 +1,49 @@
+Exp-11a :GridLayouts
+
+Aim: To write a Java program to demonstrate GridLayout.
+
+Algorithm:
+1. Start the program.
+2. Import the AWT package.
+3. Create a Frame.
+4. Set the layout to GridLayout with 2 rows and 2 columns.
+5. Create four buttons.
+6. Add the buttons to the frame.
+7. Set the size of the frame.
+8. Display the frame.
+9. Stop the program.
+
+Program:
+import java.awt.*;
+
+public class GridLayoutExample {
+    public static void main(String[] args) {
+
+        Frame f = new Frame("Grid Layout");
+
+        f.setLayout(new GridLayout(2, 2));
+
+        f.add(new Button("Button 1"));
+        f.add(new Button("Button 2"));
+        f.add(new Button("Button 3"));
+        f.add(new Button("Button 4"));
+
+        f.setSize(300, 200);
+        f.setVisible(true);
+    }
+}
+
+
+Output:
+
+
+
+
+
+
+
+
+
+Four buttons are displayed in two rows and two columns with equal sizes.
+
+Result: Thus, the Java program to demonstrate GridLayout was executed successfully.
