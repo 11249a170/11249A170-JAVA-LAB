@@ -1,0 +1,53 @@
+Exp-11b:CardLayout
+
+Aim: To write a Java program to demonstrate CardLayout.
+
+Algorithm:
+1. Start the program.
+2. Import the AWT package.
+3. Create a Frame.
+4. Create a CardLayout object.
+5. Create a Panel and set CardLayout.
+6. Add three buttons as separate cards.
+7. Display the first card.
+8. Stop the program.
+Program:
+
+File name: CardLayoutExample.java
+import java.awt.*;
+
+public class CardLayoutExample {
+    public static void main(String[] args) {
+
+        Frame f = new Frame("Card Layout");
+
+        CardLayout cl = new CardLayout();
+        Panel p = new Panel();
+
+        p.setLayout(cl);
+
+        p.add(new Button("Card 1"), "First");
+        p.add(new Button("Card 2"), "Second");
+        p.add(new Button("Card 3"), "Third");
+
+        f.add(p);
+
+        f.setSize(300, 200);
+        f.setVisible(true);
+    }
+}
+
+
+Output:
+
+
+
+
+
+
+
+
+
+Only one card is displayed at a time. The other cards remain hidden until selected through CardLayout operations.
+
+Result: Thus, the Java program to demonstrate CardLayout was executed successfully.
